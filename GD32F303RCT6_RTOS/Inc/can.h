@@ -1,0 +1,112 @@
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file    can.h
+  * @brief   This file contains all the function prototypes for
+  *          the can.c file
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2025 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __CAN_H__
+#define __CAN_H__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+#include "usart.h"
+#include "string.h"
+#include "stdio.h"
+#include "includes.h"
+
+/* USER CODE BEGIN Includes */
+
+	// 自定义协议帧结构
+typedef struct {
+  uint32_t id;        // CAN ID
+  uint8_t  len;       // 数据长度 (0-8)
+  uint8_t  data[8];   // CAN数据
+  uint8_t  checksum;  // 校验和
+} CAN_UART_Frame;
+
+/* USER CODE END Includes */
+extern CAN_HandleTypeDef hcan;
+
+extern CAN_TxHeaderTypeDef txHeader;
+extern CAN_RxHeaderTypeDef rxHeader;
+
+extern uint8_t error_frame_num;
+extern volatile uint8_t recv_error_flag;
+
+#define CAN_RX_QUEUE_SIZE 100
+
+typedef struct {
+    uint8_t frame[8];
+    uint32_t can_id;
+} can_frame_node_t;
+
+typedef struct {
+    can_frame_node_t buf[CAN_RX_QUEUE_SIZE];
+    volatile int head, tail, size;
+} can_ring_queue_t;
+
+extern can_ring_queue_t canQueue;
+
+extern uint8_t txdata[8];
+extern uint32_t TxID;
+extern uint8_t TxLength;
+extern uint8_t rxdata[8];
+extern uint32_t RxID;
+extern uint8_t RxLength;
+extern uint8_t CAN1_Send_Msg(uint32_t id, uint8_t *msg, uint8_t len);
+extern uint8_t CAN1_Recv_Msg(uint32_t *ID, uint8_t *buf, uint8_t *Length);
+extern void CAN_Send_Current_Ack(uint32_t can_id,int16_t cur, uint8_t ack_type, uint8_t frame_cnt);
+//======================================================
+// 定义 CAN 队列和数据结构
+#define CAN_QUEUE_LENGTH 8
+typedef struct {
+    uint32_t id;
+    uint8_t length;
+    uint8_t data[8];
+} CanRxMsg;
+
+//========================================================
+/* USER CODE BEGIN Private defines */
+
+/* USER CODE END Private defines */
+
+extern void MX_CAN_Init(void);
+extern uint16_t CRC16_CCITT(const uint8_t *data, uint8_t length);
+extern void SendPictureViaCAN(uint32_t baseID);
+/* USER CODE BEGIN Prototypes */
+extern HAL_StatusTypeDef CAN_SendMessage(uint32_t id, uint8_t *data, uint8_t dataLength);
+extern void MX_CAN_Init(void);
+/* USER CODE END Prototypes */
+extern void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan);
+extern uint8_t CAN1_Loopback(void);
+extern uint8_t xor_checksum(uint8_t *data);
+extern void send_can_response_bytes(uint8_t *data, uint32_t can_id, CAN_HandleTypeDef *hcan);
+
+extern void can_queue_push(can_ring_queue_t *q, uint8_t *frame, uint32_t can_id);
+extern int can_queue_pop(can_ring_queue_t *q, can_frame_node_t *out);
+extern void CAN_Send_pos_Ack(uint32_t can_id,int16_t pos, uint8_t ack_type, uint8_t frame_cnt);
+extern void CAN_Send_Ack(uint32_t can_id,uint8_t ack_type, uint8_t frame_cnt);
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __CAN_H__ */
+

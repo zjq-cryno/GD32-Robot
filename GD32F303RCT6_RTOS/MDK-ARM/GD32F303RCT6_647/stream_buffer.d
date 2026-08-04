@@ -1,0 +1,14 @@
+gd32f303rct6_647\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+gd32f303rct6_647\stream_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+gd32f303rct6_647\stream_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+gd32f303rct6_647\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+gd32f303rct6_647\stream_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+gd32f303rct6_647\stream_buffer.o: ../Inc/FreeRTOSConfig.h
+gd32f303rct6_647\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+gd32f303rct6_647\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+gd32f303rct6_647\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+gd32f303rct6_647\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+gd32f303rct6_647\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+gd32f303rct6_647\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+gd32f303rct6_647\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+gd32f303rct6_647\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h

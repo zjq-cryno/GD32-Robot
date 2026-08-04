@@ -1,0 +1,1 @@
+gd32f303rct6_647\startup_stm32f103xe.o: startup_stm32f103xe.s

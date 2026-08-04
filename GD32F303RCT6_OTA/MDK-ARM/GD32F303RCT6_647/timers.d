@@ -1,0 +1,16 @@
+gd32f303rct6_647\timers.o: ..\FreeRTOS\src\timers.c
+gd32f303rct6_647\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+gd32f303rct6_647\timers.o: ..\FreeRTOS\include\FreeRTOS.h
+gd32f303rct6_647\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+gd32f303rct6_647\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+gd32f303rct6_647\timers.o: ..\FreeRTOS\include\FreeRTOSConfig.h
+gd32f303rct6_647\timers.o: ..\FreeRTOS\include\projdefs.h
+gd32f303rct6_647\timers.o: ..\FreeRTOS\include\portable.h
+gd32f303rct6_647\timers.o: ..\FreeRTOS\include\deprecated_definitions.h
+gd32f303rct6_647\timers.o: ..\FreeRTOS\port\RVDS\ARM_CM3\portmacro.h
+gd32f303rct6_647\timers.o: ..\FreeRTOS\include\mpu_wrappers.h
+gd32f303rct6_647\timers.o: ..\FreeRTOS\include\task.h
+gd32f303rct6_647\timers.o: ..\FreeRTOS\include\list.h
+gd32f303rct6_647\timers.o: ..\FreeRTOS\include\queue.h
+gd32f303rct6_647\timers.o: ..\FreeRTOS\include\timers.h
+gd32f303rct6_647\timers.o: ..\FreeRTOS\include\task.h

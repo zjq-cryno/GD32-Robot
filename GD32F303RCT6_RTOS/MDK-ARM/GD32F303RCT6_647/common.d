@@ -1,0 +1,9 @@
+gd32f303rct6_647\common.o: ..\Src\common.c
+gd32f303rct6_647\common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+gd32f303rct6_647\common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+gd32f303rct6_647\common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+gd32f303rct6_647\common.o: ../Inc/common.h
+gd32f303rct6_647\common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+gd32f303rct6_647\common.o: ../Inc/bmi2.h
+gd32f303rct6_647\common.o: ../Inc/bmi2_defs.h
+gd32f303rct6_647\common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

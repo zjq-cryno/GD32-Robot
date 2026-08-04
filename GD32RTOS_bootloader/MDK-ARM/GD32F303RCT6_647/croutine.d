@@ -1,0 +1,14 @@
+gd32f303rct6_647\croutine.o: ..\FreeRTOS\src\croutine.c
+gd32f303rct6_647\croutine.o: ..\FreeRTOS\include\FreeRTOS.h
+gd32f303rct6_647\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+gd32f303rct6_647\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+gd32f303rct6_647\croutine.o: ..\FreeRTOS\include\FreeRTOSConfig.h
+gd32f303rct6_647\croutine.o: ..\FreeRTOS\include\projdefs.h
+gd32f303rct6_647\croutine.o: ..\FreeRTOS\include\portable.h
+gd32f303rct6_647\croutine.o: ..\FreeRTOS\include\deprecated_definitions.h
+gd32f303rct6_647\croutine.o: ..\FreeRTOS\port\RVDS\ARM_CM3\portmacro.h
+gd32f303rct6_647\croutine.o: ..\FreeRTOS\include\mpu_wrappers.h
+gd32f303rct6_647\croutine.o: ..\FreeRTOS\include\task.h
+gd32f303rct6_647\croutine.o: ..\FreeRTOS\include\list.h
+gd32f303rct6_647\croutine.o: ..\FreeRTOS\include\croutine.h
+gd32f303rct6_647\croutine.o: ..\FreeRTOS\include\list.h

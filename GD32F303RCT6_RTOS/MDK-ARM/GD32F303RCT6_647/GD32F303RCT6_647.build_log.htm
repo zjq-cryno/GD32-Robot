@@ -1,0 +1,74 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 CC, 2, LIC=8VRJ7-EBYX5-QDEKD-8FU92-QS647-CPYRX
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.34.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+D:\GD32F303RCT6_RTOS\MDK-ARM\GD32F303RCT6_647.uvprojx
+Project File Date:  09/27/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'GD32F303RCT6_647'
+Note: source file '../Src/system_stm32f1xx.c' - object file renamed from 'GD32F303RCT6_647\system_stm32f1xx.o' to 'GD32F303RCT6_647\system_stm32f1xx_1.o'.
+compiling freertos.c...
+../Src/freertos.c(315): warning:  #177-D: variable "ucLargeBuffer"  was declared but never referenced
+  	uint8_t ucLargeBuffer[2048];  // 假设任务栈仅分配了1024字节
+../Src/freertos.c(343): warning:  #550-D: variable "stackArray"  was set but never used
+      int stackArray[10]; // 小数组，容易溢出
+../Src/freertos.c(589): warning:  #111-D: statement is unreachable
+  							if(can_id == 0x104)    //修改舵机扭矩状态
+../Src/freertos.c(674): warning:  #177-D: variable "remain"  was declared but never referenced
+  									uint8_t remain = rxFrame.data[0];
+../Src/freertos.c(490): warning:  #177-D: variable "xStatus"  was declared but never referenced
+      BaseType_t xStatus;
+../Src/freertos.c: 5 warnings, 0 errors
+linking...
+GD32F303RCT6_647\GD32F303RCT6_647.sct(15): warning: L6314W: No section matches pattern *queue.o(RW).
+Program Size: Code=43300 RO-data=9340 RW-data=440 ZI-data=13984  
+Finished: 0 information, 1 warning and 0 error messages.
+After Build - User command #2: fromelf --bin -o "GD32F303RCT6_647\GD32F303RCT6_647.bin" "GD32F303RCT6_647\GD32F303RCT6_647.axf
+"GD32F303RCT6_647\GD32F303RCT6_647.axf" - 0 Error(s), 6 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: GigaDevice
+                http://gd32mcu.com/data/documents/pack/GigaDevice.GD32F30x_DFP.2.0.0.pack
+                GigaDevice.GD32F30x_DFP.2.0.0
+                GigaDevice GD32F30x Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_GD32F303RCT6_647
+  C:\Users\CC\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\CC\AppData\Local\Arm\Packs\GigaDevice\GD32F30x_DFP\2.0.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
